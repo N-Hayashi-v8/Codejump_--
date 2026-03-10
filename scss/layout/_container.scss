@@ -1,0 +1,11 @@
+.inner{
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+@media(max-width: 768px){
+  .inner{
+    padding: 40px 0;
+  }
+}

@@ -1,0 +1,77 @@
+.products{
+  &--content-left :is(.values__contents, .science__contents){
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  &--content-right :is(.values__contents, .science__contents){
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  &--title-right :is(.values__ja, .science__ja) {
+    right: 0;
+    left: auto;
+  }
+
+
+  &--title-left :is(.values__ja, .science__ja){
+    left: 0;
+    right: auto;
+  }
+
+  &--text-left :is(.values__text, .science__text) {
+    left: -40px;
+    right: auto;
+  }
+
+  &--text-right :is(.values__text, .science__text) {
+    right: -40px;
+    left: auto;
+  }
+}
+
+  @media (max-width: 768px) {
+  .products {
+    &:is(.values__inner .science__inner){
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    &:is(.values__contents, .science__contents){
+      position: relative;
+      width: 65%;
+      max-width: 640px;
+      margin: 100px 0 0;
+    }
+
+
+    .products--content-left :is(.values__inner, .science__inner) {
+      flex-direction: row-reverse;
+    }
+    .products--content-right :is(.values__inner, .science__inner) {
+      flex-direction: row;
+    }
+
+    &--content-left :is(.values__contents, .science__contents) {
+      margin-left: 0;
+      margin-right: auto;
+    }
+
+    &--content-right :is(.values__contents, .science__contents) {
+      margin-left: auto;
+      margin-right: 0;
+    }
+
+    &--text-left :is(.values__text, .science__text) {
+      left: -20px;
+      right: auto;
+    }
+
+    &--text-right :is(.values__text, .science__text) {
+      right: -20px;
+      left: auto;
+    }
+  }
+}

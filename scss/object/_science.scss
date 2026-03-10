@@ -1,0 +1,63 @@
+.science{
+  padding: 90px 0;
+  &__inner{
+    position: relative;
+  }
+  &__contents{
+    position: relative;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  &__image{
+    width: 100%;
+    display: block;
+  }
+  &__text{
+    position: absolute;
+    right: -40px;
+    bottom: -20px;
+    background: rgba(139,58,58,0.6);
+    padding: 50px 120px;
+    font-size: 16px;
+  }
+  &__ja{
+    writing-mode: vertical-rl;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 32px;
+  }
+  &__en{
+    font-size: 14px;
+    margin-block-start: 10px;
+  }
+}
+
+@media (max-width:768px){
+  .science{
+    padding: 40px 0;
+    &__inner{
+      display: flex;
+      gap: 12px;
+    }
+    &__ja{
+      // position: static;
+      // writing-mode: vertical-rl;
+      font-size: 24px;
+      flex: 0 0 24px;
+    }
+    &__en{
+      display: none;
+    }
+    &__contents{
+      flex: 0 0 auto;
+      max-width: 280px;
+      margin: 70px auto 0;
+    }
+    &__text{
+      right: -12px;
+      bottom: -8px;
+      padding: 20px 36px;
+    }
+  }
+}
